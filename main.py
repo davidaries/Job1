@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import font as tkFont
 import time
 import tkinter.messagebox
+from typing import Union
 
 root = Tk()  # create window
 
@@ -9,13 +10,21 @@ root.title("Job 1")  # title for window
 root.geometry('302x100')  # main window geometry
 # change font size
 largerFont = tkFont.Font(family='Helvetica', size=12, weight=tkFont.BOLD)
-# persons = [['Joe', 2, True], ['Jose', 7, False], ['Maria', 12, True], ['Mary', 17, False]]
+persons = [['Joe', 2, True], ['Jose', 7, False], ['Maria', 12, True], ['Mary', 17, False]]
 
 
-# def managePersons():
-# print(persons[0][1])
+def arrival_time(data):
+    return data.__getitem__(1)
 
-# managePersons()
+
+entrance = [arrival_time(val) for val in persons]
+
+print(entrance)
+
+# idea
+# if entrance.__contains__(TIMERVALUE):
+# print name in popup
+# manage if laggard or not laggard
 
 
 timeCount = 0  # counter for the current time
