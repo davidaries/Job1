@@ -17,7 +17,7 @@ def arrival_time(data):
     return data.__getitem__(1)
 
 
-entrance = [arrival_time(val) for val in persons]
+entrance = [person[1] for person in persons]
 
 timeCount = -1  # counter for the current time
 timerRunning = True
