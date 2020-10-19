@@ -13,10 +13,6 @@ largerFont = tkFont.Font(family='Helvetica', size=12, weight=tkFont.BOLD)
 persons = [['Joe', 2, True], ['Jose', 7, False], ['Maria', 12, True], ['Mary', 17, False]]
 
 
-def arrival_time(data):
-    return data.__getitem__(1)
-
-
 entrance = [person[1] for person in persons]
 
 timeCount = -1  # counter for the current time
